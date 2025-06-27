@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CityCollectionCell" customModule="SearchVC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="234" height="92"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="234" height="92"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGs-pc-hXj" customClass="CustomView" customModule="SearchVC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="234" height="92"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cityImage" translatesAutoresizingMaskIntoConstraints="NO" id="e17-Jt-zxo">
+                                <rect key="frame" x="96" y="10" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="2LU-Jy-dJI"/>
+                                    <constraint firstAttribute="height" constant="42" id="OmG-8e-1e3"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delhi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYn-5s-VJt">
+                                <rect key="frame" x="100.33333333333333" y="57" width="33.666666666666671" height="25"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.19607843137254902" green="0.035294117647058823" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.94117647058823528" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e17-Jt-zxo" firstAttribute="centerX" secondItem="jGs-pc-hXj" secondAttribute="centerX" id="BSs-Je-gq9" customClass="Cust"/>
+                            <constraint firstItem="FYn-5s-VJt" firstAttribute="top" secondItem="e17-Jt-zxo" secondAttribute="bottom" constant="5" id="JcL-d4-QzA" customClass="Cust"/>
+                            <constraint firstItem="e17-Jt-zxo" firstAttribute="top" secondItem="jGs-pc-hXj" secondAttribute="top" constant="10" id="UT5-gj-GUN" customClass="Cust"/>
+                            <constraint firstItem="FYn-5s-VJt" firstAttribute="centerX" secondItem="e17-Jt-zxo" secondAttribute="centerX" id="fUe-En-HNo" customClass="Cust"/>
+                            <constraint firstAttribute="bottom" secondItem="FYn-5s-VJt" secondAttribute="bottom" constant="10" id="mfB-wM-fK6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jGs-pc-hXj" secondAttribute="bottom" id="JQu-El-bAV"/>
+                <constraint firstItem="jGs-pc-hXj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bpH-FN-b2K"/>
+                <constraint firstItem="jGs-pc-hXj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dOv-G3-wPu"/>
+                <constraint firstAttribute="trailing" secondItem="jGs-pc-hXj" secondAttribute="trailing" id="loB-2E-gqv"/>
+            </constraints>
+            <size key="customSize" width="234" height="92"/>
+            <connections>
+                <outlet property="imgCity" destination="e17-Jt-zxo" id="Kqa-pd-8p8"/>
+                <outlet property="lblCityName" destination="FYn-5s-VJt" id="zrb-9I-ZwD"/>
+            </connections>
+            <point key="canvasLocation" x="232.06106870229007" y="-57.74647887323944"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cityImage" width="42" height="42"/>
+    </resources>
+</document>
